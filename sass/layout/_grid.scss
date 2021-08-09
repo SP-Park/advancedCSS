@@ -5,6 +5,15 @@
 
   &:not(:last-child) {  // 괄호안의 것만 제외하고 모두 적용
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -20,6 +29,7 @@
 
       @include respond(tab-port) {
         margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
       }
     }
 
